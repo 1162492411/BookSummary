@@ -12,7 +12,15 @@
   * [第五章 面向对象方法与UML](/软件工程概论/charapter5.md)
   * [第六章 面向对象分析](/软件工程概论/charapter6.md)
 
-
+* [数据库原理与应用教程](/数据库原理与应用教程/README.md)
+  * [第一章 数据库概论](/数据库原理与应用教程/charapter1.md)
+  * [第二章 数据库系统结构](/数据库原理与应用教程/charapter2.md)
+  * [第三章 SQL语言基础及数据定义功能](/数据库原理与应用教程/charapter3.md)
+  * [第四章 数据操作语句](/数据库原理与应用教程/charapter4.md)
+  * [第五章 视图](/数据库原理与应用教程/charapter5.md)
+  * [第六章 关系数据库规范化理论](/数据库原理与应用教程/charapter6.md)
+  * [第七章 数据库保护](/数据库原理与应用教程/charapter7.md)
+  * [第八章 数据库设计](/数据库原理与应用教程/charapter8.md)
 
 * [Android移动应用基础教程](/Android移动应用基础教程/README.md)
   * [第一章 Android基础入门](/Android移动应用基础教程/charapter1.md)
