@@ -1,7 +1,7 @@
 # Activity
 
 ## Activity简介
-Activity是Android四大组件之一，它股则管理Adnroid的应用程序界面。一个应用程序一般包含
+Activity是Android四大组件之一，它负责管理Adnroid的应用程序界面。一个应用程序一般包含
 多个Activity，Avtivity通过onCreate()的setContentView()方法显示指定组件
 
 ## Activity的创建
