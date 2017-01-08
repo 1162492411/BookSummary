@@ -22,6 +22,7 @@
   * [第六章 关系数据库规范化理论](/数据库原理与应用教程/charapter6.md)
   * [第七章 数据库保护](/数据库原理与应用教程/charapter7.md)
   * [第八章 数据库设计](/数据库原理与应用教程/charapter8.md)
+  * [练习题](/数据库原理与应用教程/exercise.md)
 
 * [Android移动应用基础教程](/Android移动应用基础教程/README.md)
   * [第一章 Android基础入门](/Android移动应用基础教程/charapter1.md)
