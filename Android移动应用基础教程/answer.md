@@ -3,31 +3,33 @@
 
 ### 一、填空题
 
-1.Android的布局有6种，分别是\_\_、\_\_、\_\_、\_\_、\_\_和\__。
+1.Android的布局有6种，分别是(RelativeLayout)、(LinerLayout)、(GridLayout)、
+(TableLayout)、(FrameLayout)和(AbsoluteLayout)。
 
-2.Adnroid相对布局中，表示“是否跟父布局左对齐的”的属性是\_\_\_。
+2.Adnroid相对布局中，表示“是否跟父布局左对齐的”的属性是(android:layout_alignParentLeft)。
 
-3.线性布局主要有两种形式，一种\_\_线性布局，另一种是\_\_线性布局。
+3.线性布局主要有两种形式，一种(垂直)线性布局，另一种是(水平)线性布局。
 
-4.创建Android程序时，默认使用的布局是\_\_。
+4.创建Android程序时，默认使用的布局是(RelativeLayout)。
 
-5.LogCat区域中有V、D、I、W和E，其中V代表\_\_，D代表\_\_，I代表\_\_，W代表\_\_，E代表\_\_。
+5.LogCat区域中有V、D、I、W和E，其中V代表(Verbose)，D代表(Debug)，I代表(Info)，
+W代表(Warning)，E代表(Error)。
 
 ### 二、判断题
 
-1.相对布局中android:layout_alignRight表示“与指定控件右对齐”
+1.相对布局中android:layout_alignRight表示“与指定控件右对齐”(T)
 
-2.Toast的作用是显示一些提示信息
+2.Toast的作用是显示一些提示信息(T)
 
-3.TableRow必须要设置layout_width和layout_height属性
+3.TableRow必须要设置layout_width和layout_height属性(F)
 
-4.帧布局中可以添加多个控件，这些控件会重叠的在屏幕左上角显式
+4.帧布局中可以添加多个控件，这些控件会重叠的在屏幕左上角显式(T)
 
-5.Adnroid是不支持国际化的
+5.Adnroid是不支持国际化的(F)
 
 ### 三、选择题
 
-1.以下属性中，()属性可以"在指定控件左边"
+1.以下属性中，(D)属性可以"在指定控件左边"
 
 A.android:layout_alignLeft
 
@@ -37,7 +39,7 @@ C.android:layout_left
 
 D.android:layout_toLeftOf
 
-2.表格布局中android:layout_column属性的作用是指定()
+2.表格布局中android:layout_column属性的作用是指定(B)
 
 A.行数
 
@@ -47,7 +49,7 @@ C.总行数
 
 D.总列数
 
-3.实际开发中刮刮乐游戏的布局是按照()写的
+3.实际开发中刮刮乐游戏的布局是按照(A)写的
 
 A.相对布局
 
@@ -57,7 +59,7 @@ C.帧布局
 
 D.绝对布局
 
-4.网络布局是Adnroid()新增的布局
+4.网络布局是Adnroid(D)新增的布局
 
 A.3.0
 
@@ -67,7 +69,7 @@ C.3.2
 
 D.4.0
 
-5.相对布局中，"是否跟父布局底部对齐"属性是
+5.相对布局中，"是否跟父布局底部对齐"属性是(B)
 
 A.android：layout_alignBottom
 
@@ -81,7 +83,15 @@ D.android:alyout_below
 
 1.请简述如何在程序中使用Toast
 
+  * new Toast.makeText(context,text,duration).show();
+
 2.请说明布局有几种类型，以及每种类型的作用
+  * RelativeLayout : 以组件按相对位置显示
+  * LinerLayout : 将组件按水平或垂直方式显示
+  * GridLayout : 将组件按表格排列显示
+  * TableLayout : 将组件用细线分割的方式显示
+  * FrameLayout : 将组件按帧显示
+  * AbsoluteLayout : 将组件按设置的绝对位置来显示
 
 ### 五、编程题
 
@@ -94,31 +104,31 @@ D.android:alyout_below
 
 ### 一、填空题
 
-1.Android生命周期的三种状态分别是\_\_、\_\_、\_\_
+1.Android生命周期的三种状态分别是(运行状态)、(暂停状态)、(停止状态)
 
-2.Adnroid的四种启动模式是\_\_、\_\_、\_\_、\_\_
+2.Adnroid的四种启动模式是(standard)、(singleTop)、(singleTask)和(singleInstance)
 
-3.Adnroid中Intent寻找目标组件的方式有两种：\_\_和\_\_
+3.Adnroid中Intent寻找目标组件的方式有两种：(显式)和(隐式)
 
-4.Activity生命周期中"回到前台，再次可见时执行"时调用的方法是\_\_
+4.Activity生命周期中"回到前台，再次可见时执行"时调用的方法是(onRestart())
 
-5.Android中提供了一个\_\_方法实现回传数据
+5.Android中提供了一个(startActivityForResult())方法实现回传数据
 
 ### 二、判断题
 
-1.Activity是Android应用程序的四大组件之一
+1.Activity是Android应用程序的四大组件之一(T)
 
-2.Intent一般只用于启动Activity，不能开启广播和服务
+2.Intent一般只用于启动Activity，不能开启广播和服务(F)
 
-3.Intent可以用来开启Activity，同样它也可以用来在Activity之间传递数据
+3.Intent可以用来开启Activity，同样它也可以用来在Activity之间传递数据(T)
 
-4.Activity默认的启动模式是singleTop模式
+4.Activity默认的启动模式是singleTop模式(F)
 
-5.在数据传递时，如果需要获取返回的数据，需要使用onActivityResult()方法
+5.在数据传递时，如果需要获取返回的数据，需要使用onActivityResult()方法(T)
 
 ### 三、选择题
 
-1.一个应用程序默认会包含()个Activity
+1.一个应用程序默认会包含(A)个Activity
 
 A. 1
 
@@ -128,7 +138,7 @@ C. 10
 
 D. 若干
 
-2.下列方法中，Activity从启动到关闭不会执行的是()
+2.下列方法中，Activity从启动到关闭不会执行的是(D)
 
 A. onCreate()
 
@@ -138,7 +148,7 @@ C. onResume()
 
 D. onRestart()
 
-3.下列组件中，不能使用Intent启动的是()
+3.下列组件中，不能使用Intent启动的是(D)
 
 A. Activity
 
@@ -148,7 +158,7 @@ C. 广播
 
 D. 内容提供者
 
-4.startActivityForResult()方法接收两个参数，第一个是Intent，第二个是()
+4.startActivityForResult()方法接收两个参数，第一个是Intent，第二个是(C)
 
 A. resultCode
 
@@ -158,7 +168,7 @@ C. 请求码
 
 D. data
 
-5.下列关于Activity的描述，错误的是()
+5.下列关于Activity的描述，错误的是(C)
 
 A. Activity是Android的四大组件之一
 
@@ -171,24 +181,31 @@ D. Activity就像一个界面管理员，用户在界面上的操作是通过Act
 ### 四、简答题
 
 1.简要说明Activity的四种启动模式的区别
+  * Standard : 启动的Activity直接进入运行栈
+  * SingleTop : 启动一个Activity时，若栈顶是该Activity，则直接使用它；否则将其入栈
+  * SingleTask : 启动一个Activity时，若栈中存在该Activity，则使其处于栈顶位置；
+  否则将该Activity入栈
+  * singleInstance : 每启动一个Activity，新建一个栈将该Activity入栈
 
 2.简要说明Activity的三种状态以及不同状态使用的方法
-
+  * 运行状态 : Activity处于前台，响应用户操作；使用onCreate()、onStart()、onResume()方法
+  * 暂停状态 : Activity转入后台，不再具有焦点；使用onPause()方法
+  * 停止状态  : Activity完全不可见;使用onStop()方法
 
 -------------
 ## 第四章
 
 ### 一、填空题
 
-1.序列化是将对象状态转换为\_\_的过程
+1.序列化是将对象状态转换为()的过程
 
-2.Android中的文件可以存储在\_\_和\_\_中
+2.Android中的文件可以存储在()和()中
 
-3.通常情况下，解析XML文件有三种方式：\_\_、\_\_和\_\_
+3.通常情况下，解析XML文件有三种方式：()、()和()
 
-4.SharedPrteferences是一个轻量级的存储类，主要用于存储一些应用程序的\_\_
+4.SharedPrteferences是一个轻量级的存储类，主要用于存储一些应用程序的()
 
-5.Adnroid中的数据存储方式有5种，分别是\_\_、\_\_、\_\_、\_\_和\_\_
+5.Adnroid中的数据存储方式有5种，分别是()、()、()、()和()
 
 ### 二、判断题
 
@@ -272,15 +289,15 @@ D.SQLite
 
 ### 一、填空题
 
-1.ListView的适配器有三种，分别是\_\_、\_\_和\_\_
+1.ListView的适配器有三种，分别是()、()和()
 
-2.创建数据库以及数据库版本更新需要继承\_\_
+2.创建数据库以及数据库版本更新需要继承()
 
-3.SQLite创建时调用\_\_方法，升级时调用\_\_方法
+3.SQLite创建时调用()方法，升级时调用()方法
 
-4.要查询SQLite数据库中的信息需要使用\_\_接口，接口完毕后调用\_\_关闭
+4.要查询SQLite数据库中的信息需要使用()接口，接口完毕后调用()关闭
 
-5.创建ListView的布局界面必须通过\_\_属性才鞥年使数据显示在界面上
+5.创建ListView的布局界面必须通过()属性才鞥年使数据显示在界面上
 
 ### 二、判断题
 
@@ -363,15 +380,15 @@ D.ListView中每一项被选中时，将会触发ListView对象的ItemClick事�
 
 ### 一、填空题
 
-1.ContentProvider匹配Uri需要使用的类是\_\_
+1.ContentProvider匹配Uri需要使用的类是()
 
-2.使用内容观察者时，调用\_\_方法可以得到数据变化的信息
+2.使用内容观察者时，调用()方法可以得到数据变化的信息
 
-3.ContentProvider提供了对数据增、删、改、查的方法，分别为\_\_、\_\_、\_\_和\_\_
+3.ContentProvider提供了对数据增、删、改、查的方法，分别为()、()、()和()
 
-4.ContentProvider用于\_\_和\_\_数据，是Android中不同应用程序之间共享数据的接口
+4.ContentProvider用于()和()数据，是Android中不同应用程序之间共享数据的接口
 
-5.在应用程序中，使用ContentProvider暴露自己的数据，通过\_\_对暴露的数据进行操作
+5.在应用程序中，使用ContentProvider暴露自己的数据，通过()对暴露的数据进行操作
 
 ###　二、判断题
 
@@ -448,37 +465,38 @@ D.观察其他应用数据必须在清单文件注册
 1.使用ContentProvider管理联系人信息，将联系人信息展示在界面上
 
 2.获取系统图库的信息，使用ContentProvider制作本地图片查看器
+
 -------------
 
 ## 第七章
 
 ### 一、填空题
 
-1.广播接收者可以在清单文件使用\_\_注册
+1.广播接收者可以在清单文件使用(< receiver >)注册
 
-2.停止广播需要使用\_\_方法
+2.停止广播需要使用( abortBroadcast() )方法
 
-3.广播的发送有两种形式，分别为\_\_和\_\_
+3.广播的发送有两种形式，分别为(有序广播)和(无序广播)
 
-4.代码注册广播需要使用\_\_方法，解除广播需要使用\_\_方法
+4.代码注册广播需要使用( registerBroadcast() )方法，解除广播需要使用( unregisterBroadcast() )方法
 
-5.指定接收广播类型的函数是\_\_
+5.指定接收广播类型的函数是( setAction() )
 
 ### 二、判断题
 
-1.每一个广播只能有一个广播接收者
+1.每一个广播只能有一个广播接收者 (F)
 
-2.广播接收者是四大组件之一，必须在清单文件中注册
+2.广播接收者是四大组件之一，必须在清单文件中注册 (T)
 
-3.广播接收者的注册信息必须要保持唯一性
+3.广播接收者的注册信息必须要保持唯一性 (T)
 
-4.可以在BroadcastReceiver和onReceive方法中处理耗时负责的业务
+4.可以在BroadcastReceiver和onReceive方法中处理耗时负责的业务 (F)
 
-5.广播接收者在注册后必须手动关闭
+5.广播接收者在注册后必须手动关闭 (F)
 
 ### 三、选择题
 
-1.继承BroadcastReceiver需要重写的方法是
+1.继承BroadcastReceiver需要重写的方法是( A )
 
 A.onReceive()
 
@@ -488,7 +506,7 @@ C.onCreate()
 
 D.onStart()
 
-2.关于广播的作用，说法正确是
+2.关于广播的作用，说法正确是( A )
 
 A.它主要用于接收系统发出的一些消息
 
@@ -498,7 +516,7 @@ C.它可以启动一个Activity
 
 D.它可以帮助Activity修改用户界面
 
-3.下列方法中，用于发送一条有序广播的是
+3.下列方法中，用于发送一条有序广播的是 ( B )
 
 A.startBroadcastReceiver()
 
@@ -508,17 +526,17 @@ C.sendBroadcast()
 
 D.sendReceiver()
 
-4.在清单文件中，注册广播时使用的结点是
+4.在清单文件中，注册广播时使用的结点是 ( C )
 
-A.\<activity\>
+A.< activity >
 
-B.\<broadcast\>
+B.< broadcast >
 
-C.\<receiver\>
+C.< receiver >
 
-D.\<broadcastreceiver\>
+D.< broadcastreceiver >
 
-5.关于BroadcastReceiver说法不正确的是
+5.关于BroadcastReceiver说法不正确的是 ( B )
 
 A.是用来接收广播Intent的
 
@@ -531,8 +549,15 @@ D.接收者生命的优先级别在android:priority属性中声明，数值越�
 ### 四、简答题
 
 1.说明注册广播有几种方式，以及这些方式有何优缺点
+  * 非常驻型广播 : 这种方式广播的生命周期依赖于注册广播的组件
+  * 常驻型广播 : 应用程序关闭后，如果收到其他应用程序发出的广播，启动该应用程序
 
 2.简要说明接收系统广播时哪些功能需要使用权限
+  * 拨打电话 : < uses-permission android:name="android.permission.CALL_PHONE" />
+  * 发送短信 : < uses-permission android:name="android.permission.SEND_SMS" />
+  * 设备开机 : < uses-permission android:name=android.permission.RECEIVE_BOOT_COMPLETED />
+  * 电池电量低 : < action android:name="android.intent.action.ACTION_BATTERY_LOW" />
+
 
 ### 五、编程题
 
@@ -548,15 +573,15 @@ D.接收者生命的优先级别在android:priority属性中声明，数值越�
 
 ### 一、填空题
 
-1.在创建服务时，必须要继承\_\_类
+1.在创建服务时，必须要继承()类
 
-2.绑定服务时，必须要实现服务的\_\_方法
+2.绑定服务时，必须要实现服务的()方法
 
-3.在清单文件中，注册服务时应该使用的结点是\_\_
+3.在清单文件中，注册服务时应该使用的结点是()
 
-4.服务的开启方式有两种，分别是\_\_和\_\_
+4.服务的开启方式有两种，分别是()和()
 
-5.在进行远程服务通信时，需要使用\_\_接口
+5.在进行远程服务通信时，需要使用()接口
 
 ### 二、判断题
 
@@ -641,15 +666,15 @@ D.如果Service已经启动，只会执行onStart()方法，不再执行onCreat(
 
 ### 一、填空题
 
-1.Android系统提供了多种网络通信方式，包括\_\_、\_\_、\_\_和\_\_
+1.Android系统提供了多种网络通信方式，包括()、()、()和()
 
-2.当客户端与服务器端建立连接后，向服务器端发送的请求，被称为\_\_
+2.当客户端与服务器端建立连接后，向服务器端发送的请求，被称为()
 
-3.Android客户端访问网络发送HTTP请求的方式有两种，分别是\_\_和\_\_
+3.Android客户端访问网络发送HTTP请求的方式有两种，分别是()和()
 
-4.与服务器交互过程中，最常用的两种数据提交方式是\_\_和\_\_
+4.与服务器交互过程中，最常用的两种数据提交方式是()和()
 
-5.为了根据下载进度实时更新UI界面，需要用到Handle消息机制来实现\_\_
+5.为了根据下载进度实时更新UI界面，需要用到Handle消息机制来实现()
 
 ### 二、判断题
 
