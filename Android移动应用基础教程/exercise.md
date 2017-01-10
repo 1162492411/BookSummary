@@ -280,7 +280,7 @@ D.SQLite
 
 4.要查询SQLite数据库中的信息需要使用\_\_接口，接口完毕后调用\_\_关闭
 
-5.创建ListView的布局界面必须通过\_\_属性才鞥年使数据显示在界面上
+5.创建ListView的布局界面必须通过\_\_属性才能使数据显示在界面上
 
 ### 二、判断题
 
@@ -377,7 +377,7 @@ D.ListView中每一项被选中时，将会触发ListView对象的ItemClick事�
 
 1.ContentProvider所提供的Uri可以随便定义
 
-2.ContentProvider可以通过ContentProvider提供的Uri进行数据操作
+2.ContentResolver可以通过ContentProvider提供的Uri进行数据操作
 
 3.ContentObserver观察指定Uri数据发生变化时调用ContentProvider的是onChange()方法
 

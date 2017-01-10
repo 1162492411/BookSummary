@@ -197,31 +197,31 @@ D. Activity就像一个界面管理员，用户在界面上的操作是通过Act
 
 ### 一、填空题
 
-1.序列化是将对象状态转换为()的过程
+1.序列化是将对象状态转换为(可传输)的过程
 
-2.Android中的文件可以存储在()和()中
+2.Android中的文件可以存储在(内存)和(SD卡)中
 
-3.通常情况下，解析XML文件有三种方式：()、()和()
+3.通常情况下，解析XML文件有三种方式：(DOM)、(SAX)和(PULL)
 
-4.SharedPrteferences是一个轻量级的存储类，主要用于存储一些应用程序的()
+4.SharedPrteferences是一个轻量级的存储类，主要用于存储一些应用程序的(配置参数)
 
-5.Adnroid中的数据存储方式有5种，分别是()、()、()、()和()
+5.Adnroid中的数据存储方式有5种，分别是(文件)、(SQLite)、(SharedPrteferences)、(ContentProvider)和(网络)
 
 ### 二、判断题
 
-1.SharedPrteferences本质上是一个XML文件，以Map<key,value>形式存入文件中
+1.SharedPrteferences本质上是一个XML文件，以Map<key,value>形式存入文件中 (T)
 
-2.文件存储是通过I/O流的形式把数据原封不动的存储到文档中
+2.文件存储是通过I/O流的形式把数据原封不动的存储到文档中 (T)
 
-3.XML文件只能用来保存本地数据，不能在网络中传输
+3.XML文件只能用来保存本地数据，不能在网络中传输 (F)
 
-4.ContentProvider表示内容提供者，用于显示程序中的数据
+4.ContentProvider表示内容提供者，用于显示程序中的数据 (F)
 
-5.当用户文件保存到SD卡时，需要在清单文件中添加权限"android:permission.WRITE_EXTERNAL_STORAGE"
+5.当用户文件保存到SD卡时，需要在清单文件中添加权限"android:permission.WRITE_EXTERNAL_STORAGE" (T)
 
 ### 三、选择题
 
-1.下列文件操作权限中，指定文件内容可以追加的是
+1.下列文件操作权限中，指定文件内容可以追加的是( C )
 
 A.MODE_PRIVATE
 
@@ -231,7 +231,7 @@ C.MODE_APPEND
 
 D.MODE_WORLD_WRITEABLE
 
-2.下列代码中，用于获取SD卡路径的是
+2.下列代码中，用于获取SD卡路径的是( D )
 
 A.Environment.getSD()
 
@@ -241,7 +241,7 @@ C.Environment.getSDDirectory()
 
 D.Environment.getExternalStorageDirectory()
 
-3.下列选项中，关于文件存储数据的说法错误的是
+3.下列选项中，关于文件存储数据的说法错误的是( D )
 
 A.文件存储是以流的形式来操作数据的
 
@@ -251,7 +251,7 @@ C.文件存储可以将数据存储到内存中
 
 D.Android中只能使用文件存储数据
 
-4.下列选项中，关于XML序列化和解析描述合理的是
+4.下列选项中，关于XML序列化和解析描述合理的是 ( BD )
 
 A.DOM解析会将XML文件的所有内容以文档树形式存放在内存中
 
@@ -261,7 +261,7 @@ C.XmlSerializer类的startDocument()方法用于写入序列号的开始结点
 
 D.XmlSerializer类的setOutput()方法用于设置文件的编码方式
 
-5.如果要将程序中的私有数据分享给其他应用程序，可以使用的是
+5.如果要将程序中的私有数据分享给其他应用程序，可以使用的是( C )
 
 A.文件存储
 
@@ -274,8 +274,21 @@ D.SQLite
 ### 四、简答题
 
 1.请简述Android中5种数据存储方式各自的特点
+  * 文件存储 : 可以存储大量数据到本地文件中
+  * SQLite : 占用内存小，所有文件都存放在数据库中
+  * SharedPrteferences : 一般用于存储用户配置，使用方便，以键值对形式存在于内存中
+  * ContentProvider : 提供统一的规范，使数据可以被第三方应用程序访问
+  * 网络 : 将数据存储在服务器，安全
 
 2.请简述SharedPrteferences如何存储数据
+
+```
+  SharedPrteferences sp = getSharedPreferences(String filename, int mode);
+  Editor edit = sp.Edit();
+  edit.putString(key,value);
+  edit.commit();
+```
+
 
 ### 五、编程题
 
@@ -289,31 +302,31 @@ D.SQLite
 
 ### 一、填空题
 
-1.ListView的适配器有三种，分别是()、()和()
+1.ListView的适配器有三种，分别是(BaseAdapter)、(SimpleAdapter)和(ArrayAdapter)
 
-2.创建数据库以及数据库版本更新需要继承()
+2.创建数据库以及数据库版本更新需要继承(SQLiteOpenHelper)
 
-3.SQLite创建时调用()方法，升级时调用()方法
+3.SQLite创建时调用( onCreate() )方法，升级时调用( onUpgrade() )方法
 
-4.要查询SQLite数据库中的信息需要使用()接口，接口完毕后调用()关闭
+4.要查询SQLite数据库中的信息需要使用( Cursor )接口，接口完毕后调用( close )关闭
 
-5.创建ListView的布局界面必须通过()属性才鞥年使数据显示在界面上
+5.创建ListView的布局界面必须通过( id )属性才能使数据显示在界面上
 
 ### 二、判断题
 
-1.SQLite数据库使用完后不需要关闭，不影响程序性能
+1.SQLite数据库使用完后不需要关闭，不影响程序性能 ( F )
 
-2.使用ListView显示较为复杂的数据时最好用ArrayAdapter适配器
+2.使用ListView显示较为复杂的数据时最好用ArrayAdapter适配器 ( F )
 
-3.SQLite既支持Android的API又支持SQL语句进行增、删、改、查操作
+3.SQLite既支持Android的API又支持SQL语句进行增、删、改、查操作 ( T )
 
-4.使用BaseAdapter控制ListView显示多少条数据是通过getView()方法设置
+4.使用BaseAdapter控制ListView显示多少条数据是通过getView()方法设置 ( F )
 
-5.SQLite只支持NULL、INTEGER、REAL、TEXT和BLOB等5种数据类型
+5.SQLite只支持NULL、INTEGER、REAL、TEXT和BLOB等5种数据类型 ( F )
 
 ### 三、选择题
 
-1.使用SQLite数据库进行查询后， 必须要做的操作的是
+1.使用SQLite数据库进行查询后， 必须要做的操作的是 ( C )
 
 A.关闭数据库
 
@@ -323,7 +336,7 @@ C.关闭cursor
 
 D.使用quit函数退出
 
-2.关于适配器的说法正确的是
+2.关于适配器的说法正确的是 ( B )
 
 A.它主要用来存储数据
 
@@ -333,7 +346,7 @@ C.它主要用来存储XML数据
 
 D.它主要用来解析数据
 
-3.使用SQLiteOpenHelper类可以生成一个数据库并可以对数据库版本进行管理的方法
+3.使用SQLiteOpenHelper类可以生成一个数据库并可以对数据库版本进行管理的方法 ( B )
 
 A.getDatabase()
 
@@ -343,7 +356,7 @@ C.getReadableDatabase()
 
 D.getAbleDatabase()
 
-4.下列命令中，属于SQLite下的命令是
+4.下列命令中，属于SQLite下的命令是 ( C )
 
 A.shell
 
@@ -353,7 +366,7 @@ C.quit
 
 D.keytool
 
-5.下列关于ListView使用的描述中，不正确的是
+5.下列关于ListView使用的描述中，不正确的是 ( B )
 
 A.要使用ListView，必须为该ListView使用Adapter方式传递数据
 
@@ -366,8 +379,14 @@ D.ListView中每一项被选中时，将会触发ListView对象的ItemClick事�
 ### 四、简答题
 
 1.请简要说明SQLite数据库创建的过程
+  * 创建一个类继承SQLiteOpenHelper，重写其onCreate()方法，创建数据表
+  * 调用该类的getWriteableDatabase获取可读写的数据库对象
 
 2.请简要说明BaseAdapter适配器4个抽象方法以及它们的具体作用
+  * getCount() : 获取条目总数
+  * getItem() : 获取条目
+  * getItemId() : 获取条目的id
+  * getView() : 获取条目的视图
 
 ### 五、编程题
 
@@ -380,31 +399,32 @@ D.ListView中每一项被选中时，将会触发ListView对象的ItemClick事�
 
 ### 一、填空题
 
-1.ContentProvider匹配Uri需要使用的类是()
+1.ContentProvider匹配Uri需要使用的类是( UriMatcher )
 
-2.使用内容观察者时，调用()方法可以得到数据变化的信息
+2.使用内容观察者时，调用( onChange() )方法可以得到数据变化的信息
 
-3.ContentProvider提供了对数据增、删、改、查的方法，分别为()、()、()和()
+3.ContentProvider提供了对数据增、删、改、查的方法，分别为( isnert() )、( delete() )、
+( update() )和( query() )
 
-4.ContentProvider用于()和()数据，是Android中不同应用程序之间共享数据的接口
+4.ContentProvider用于( 保存 )和( 检索 )数据，是Android中不同应用程序之间共享数据的接口
 
-5.在应用程序中，使用ContentProvider暴露自己的数据，通过()对暴露的数据进行操作
+5.在应用程序中，使用ContentProvider暴露自己的数据，通过( ContentResolver )对暴露的数据进行操作
 
 ###　二、判断题
 
-1.ContentProvider所提供的Uri可以随便定义
+1.ContentProvider所提供的Uri可以随便定义 ( F )
 
-2.ContentProvider可以通过ContentProvider提供的Uri进行数据操作
+2.ContentResolver可以通过ContentProvider提供的Uri进行数据操作 ( T )
 
-3.ContentObserver观察指定Uri数据发生变化时调用ContentProvider的是onChange()方法
+3.ContentObserver观察指定Uri数据发生变化时调用ContentProvider的是onChange()方法 ( T )
 
-4.使用ContentResolver操作数据时，必须在清单文件进行注册
+4.使用ContentResolver操作数据时，必须在清单文件进行注册 ( F )
 
-5.ContentProvider与Activity一样，创建时首先会调用onCreate()方法
+5.ContentProvider与Activity一样，创建时首先会调用onCreate()方法  ( T )
 
 ### 三、选择题
 
-1.下列选项中，属于Android四大组件的是
+1.下列选项中，属于Android四大组件的是 ( AC )
 
 A.Activity
 
@@ -414,7 +434,7 @@ C.Service
 
 D.ContentObserver
 
-2.下列关于ContentResolver的描述，错误的是
+2.下列关于ContentResolver的描述，错误的是 ( C )
 
 A.可以操作数据库数据
 
@@ -424,7 +444,7 @@ C.只能操作ContentProvider暴露的数据
 
 D.可以操作ContentProvider的任意数据
 
-3.下列关于ContentProvider的描述正确的是
+3.下列关于ContentProvider的描述正确的是 ( ACD )
 
 A.提供的Uri必须符合规范
 
@@ -434,7 +454,7 @@ C.必须在清单文件注册
 
 D.authorities属性必须和包名一致
 
-4.继承ContentProvider类必须重写它的
+4.继承ContentProvider类必须重写它的 ( ABD )
 
 A.delete()
 
@@ -444,7 +464,7 @@ C.onStart()
 
 D.onUpdate()
 
-5.下列关于ContentObserver的说法正确的是
+5.下列关于ContentObserver的说法正确的是 ( C )
 
 A.可以观察任何数据
 
@@ -457,8 +477,13 @@ D.观察其他应用数据必须在清单文件注册
 ### 四、简答题
 
 1.请简要说明ContentProvider对外共享数据的好处
+  * 统一数据访问方式，访问起来更加规范
+  * 指定了URI，使数据更加安全
 
 2.请简要说明ContentProvider、ContentResolver和ContentObserver之间的联系
+  * ContentProvider共享数据给外部应用访问
+  * ContentResolver访问ContentProvider暴露的数据
+  * ContentObserver用来观察ContentProvider的数据是否发生变化
 
 ### 五、编程题
 
@@ -573,31 +598,31 @@ D.接收者生命的优先级别在android:priority属性中声明，数值越�
 
 ### 一、填空题
 
-1.在创建服务时，必须要继承()类
+1.在创建服务时，必须要继承( Service )类
 
-2.绑定服务时，必须要实现服务的()方法
+2.绑定服务时，必须要实现服务的( onBind() )方法
 
-3.在清单文件中，注册服务时应该使用的结点是()
+3.在清单文件中，注册服务时应该使用的结点是( < service > )
 
-4.服务的开启方式有两种，分别是()和()
+4.服务的开启方式有两种，分别是( startService() )和( bindService() )
 
-5.在进行远程服务通信时，需要使用()接口
+5.在进行远程服务通信时，需要使用( AIDL )接口
 
 ### 二、判断题
 
-1.以绑定方式开启服务后，服务与调用者没有关系
+1.以绑定方式开启服务后，服务与调用者没有关系 ( F )
 
-2.服务的界面可以设置的很美观
+2.服务的界面可以设置的很美观 ( F )
 
-3.以绑定方式开启服务后，当界面不可见时服务就会被关闭
+3.以绑定方式开启服务后，当界面不可见时服务就会被关闭 ( F )
 
-4.在服务中可以处理长时间的耗时操作
+4.在服务中可以处理长时间的耗时操作 ( T )
 
-5.服务不是Android中的四大组件之一，因此不需要在清单文件中注册
+5.服务不是Android中的四大组件之一，因此不需要在清单文件中注册 ( F )
 
 ### 三、选择题
 
-1.每一次启动服务都会调用的方法是
+1.每一次启动服务都会调用的方法是 ( B )
 
 A.onCreate()
 
@@ -607,7 +632,7 @@ C.onResume()
 
 D.onStartCommand()
 
-2.下列选项中，属于绑定服务特点的是
+2.下列选项中，属于绑定服务特点的是 ( AC )
 
 A.以bindService()方法开启
 
@@ -617,7 +642,7 @@ C.必须实现ServiceConnection
 
 D.使用stopService()方法关闭服务
 
-3.Service与Activity的共同点是
+3.Service与Activity的共同点是 ( A )
 
 A.都是四大组件之一
 
@@ -627,7 +652,7 @@ C.都可以被远程调用
 
 D.都可以自定义美观界面
 
-4.下列方法中，不属于Service生命周期的是
+4.下列方法中，不属于Service生命周期的是 ( A )
 
 A.onResume()
 
@@ -637,7 +662,7 @@ C.onStop()
 
 D.onDestory()
 
-5.关于Service生命周期的onCreate()和onStart()方法，说法正确的是
+5.关于Service生命周期的onCreate()和onStart()方法，说法正确的是 ( BD )
 
 A.如果Service已经启动，将先后调用onCreate()方法和onStart()方法
 
@@ -650,8 +675,13 @@ D.如果Service已经启动，只会执行onStart()方法，不再执行onCreat(
 ### 四、简答题
 
 1.请简要说明AIDL访问远程服务的步骤
+  * 在需要被调用的服务的项目中创建AIDL接口
+  * 创建相应的服务
+  * 创建第二个项目用于调用服务，将服务中的AIDL接口拷贝到第二个项目中
 
 2.请简要说明Service的几种启动方式及其特点
+  * start方式 : 服务与调用者没有关系，调用者关闭后服务仍然运行
+  * bind方式 : 服务者与调用者的生命周期关联，调用者关闭后服务也关闭
 
 ### 五、编程题
 
@@ -666,31 +696,31 @@ D.如果Service已经启动，只会执行onStart()方法，不再执行onCreat(
 
 ### 一、填空题
 
-1.Android系统提供了多种网络通信方式，包括()、()、()和()
+1.Android系统提供了多种网络通信方式，包括(Socket通信)、(URL通信)、(HTTP通信)和(WebView)
 
-2.当客户端与服务器端建立连接后，向服务器端发送的请求，被称为()
+2.当客户端与服务器端建立连接后，向服务器端发送的请求，被称为( HTTP请求 )
 
-3.Android客户端访问网络发送HTTP请求的方式有两种，分别是()和()
+3.Android客户端访问网络发送HTTP请求的方式有两种，分别是( HTTPURLConnection )和( HTTPClient )
 
-4.与服务器交互过程中，最常用的两种数据提交方式是()和()
+4.与服务器交互过程中，最常用的两种数据提交方式是( get )和( post )
 
-5.为了根据下载进度实时更新UI界面，需要用到Handle消息机制来实现()
+5.为了根据下载进度实时更新UI界面，需要用到Handle消息机制来实现( 线程间通信 )
 
 ### 二、判断题
 
-1.HttpURLConnection是一个标准的Java类。
+1.HttpURLConnection是一个标准的Java类 ( T )
 
-2.使用HttpClient访问网络时，不需要创建HttpClient对象。
+2.使用HttpClient访问网络时，不需要创建HttpClient对象 ( F )
 
-3.GET方式是以实体的方式得到由请求URL所指向的资源信息
+3.GET方式是以实体的方式得到由请求URL所指向的资源信息 ( T )
 
-4.HttpClient是对AsyncHttpClient的再次包装
+4.HttpClient是对AsyncHttpClient的再次包装 ( F )
 
-5.在多线程下载中，每个线程必须要下载对应的模块，然后将这些模块顺序序组组合
+5.在多线程下载中，每个线程必须要下载对应的模块，然后将这些模块顺序序组组合 ( T )
 
 ### 三、选择题
 
-1.下列选项中，不属于Handler机制中的关键对象是
+1.下列选项中，不属于Handler机制中的关键对象是 ( A )
 
 A.Content
 
@@ -700,7 +730,7 @@ C.MessageQueue
 
 D.Looper
 
-2.下列通信方式中，不是Android系统提供的是
+2.下列通信方式中，不是Android系统提供的是 ( D )
 
 A.Socket通信
 
@@ -710,7 +740,7 @@ C.URL通信
 
 D.以太网通信
 
-3.关于HttpURLConnection访问网络的基本用法，描述错误的是
+3.关于HttpURLConnection访问网络的基本用法，描述错误的是 ( C )
 
 A.HttpURLConnection对象需要设置请求网络的方式
 
@@ -720,7 +750,7 @@ C.需要通过new关键字来创建HttpURLConnection对象
 
 D.访问网络完毕需要关闭HTTP链接
 
-4.下列选项中，不属于AsyncHttpClient特点的是
+4.下列选项中，不属于AsyncHttpClient特点的是 ( D )
 
 A.发送异步HTTP请求
 
@@ -730,7 +760,7 @@ C.内部采用了线程池来处理并发请求
 
 D.自动垃圾回收
 
-5.下列选项中，关于GET和POST请求方式，描述错误的是
+5.下列选项中，关于GET和POST请求方式，描述错误的是 ( B )
 
 A.使用GET方式访问网络URL的长度是有限制的
 
@@ -742,9 +772,18 @@ D.GET请求方式向服务器提交的参数跟在请求URL后面
 
 ### 四、简答题
 
-1.  请简述使用HTTPClient访问网络的步骤
+1.请简述使用HTTPClient访问网络的步骤
+  * 创建HTTPClient对象
+  * 指定访问网络的方式
+  * 如果需要设置方法参数，可以使用setParams()/setEntity()
+  * 调用HTTPClient对象的execute()方法访问网络，并获取HTTPResponse对象
+  * 调用HTTPResponse对象的getEntity()方法获取响应内容
 
 2.请简述Handler机制4个关键对象的作用
+  * Message ：携带待交换的数据
+  * Handler : 用于发送消息和处理消息
+  * MessageQueue : 存放通过handler发送的信息
+  * Looper : 调用loop()方法后进入死循环，每当发现MessageQueue中存在消息时就处理消息
 
 
 ### 五、编程题
